@@ -1,0 +1,7 @@
+Django==1.6
+Pillow==2.5.1
+celery==3.1.13
+django-celery==3.1.10
+djangorestframework==2.3.10
+kombu==3.0.21
+sorl-thumbnail==11.12

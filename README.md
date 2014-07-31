@@ -1,4 +1,4 @@
 picarchive
 ==========
 
-test task picarchive
+picarchive

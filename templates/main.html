@@ -1,0 +1,119 @@
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <title>PicArchive</title>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="{{ STATIC_URL}}bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+        <script type="text/javascript" src="{{ STATIC_URL }}js/jquery-1.8.2.min.js"></script>
+        <script type="text/javascript" src="{{ STATIC_URL }}js/jquery-ui-1.8.24.custom.min.js"></script>
+        <script type="text/javascript" src="{{ STATIC_URL }}js/local.js"></script>
+        {% block media %}{% endblock %}
+    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container-fluid">
+                    <a class="brand" href="#">PicArchive</a>
+                    <div class="nav-collapse collapse">
+                        <p class="navbar-text pull-right" style="font-size: 14pt;" id="username_block"></p>
+                    </div> 
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid container" style="width:1160px;">
+              <div class="hero-unit" style="margin-top: 100px;" id="login_and_registration">
+                <div class="row-fluid">
+                  <div class="span6">
+                      <form class="form-horizontal">
+                        <div class="control-group">
+                          <label class="control-label" for="input_username">Email</label>
+                          <div class="controls">
+                            <input type="text" id="input_username" placeholder="Email">
+                          </div>
+                        </div>
+                        <div class="control-group">
+                          <label class="control-label" for="input_password">Пароль</label>
+                          <div class="controls">
+                            <input type="password" id="input_password" placeholder="Пароль">
+                          </div>
+                        </div>
+                        <div class="control-group">
+                          <div class="controls">
+                            <button type="button" class="btn" id="login_btn">Войти</button>
+                          </div>
+                        </div>
+                      </form>
+                  </div> 
+                  <div class="span6">
+                      <form class="form-horizontal">
+                        <div class="control-group">
+                          <label class="control-label" for="input_email">Email</label>
+                          <div class="controls">
+                            <input type="text" id="input_email" placeholder="Email">
+                          </div>
+                        </div>
+                        <div class="control-group">
+                          <label class="control-label" for="input_new_password1">Пароль</label>
+                          <div class="controls">
+                            <input type="password" id="input_new_password1" placeholder="Пароль">
+                          </div>
+                        </div>
+                        <div class="control-group">
+                          <label class="control-label" for="input_new_password2">Еще раз пароль</label>
+                          <div class="controls">
+                            <input type="password" id="input_new_password2" placeholder="Пароль">
+                          </div>
+                        </div>
+                        <div class="control-group">
+                          <div class="controls">
+                            <button type="button" class="btn" id="registration_btn">Зарегистрироваться</button>
+                          </div>
+                        </div>
+                      </form>
+                  </div> 
+                </div>
+              </div>
+              <div class="" style="margin-top: 100px;" id="create_picture_block">
+                <div class="row-fluid ">
+                  <div class="span8 hero-unit">
+                      <form class="form-horizontal">
+                        <div class="control-group">
+                          <label class="control-label" for="input_title">Заголовок</label>
+                          <div class="controls">
+                            <input type="text" id="input_title" placeholder="Заголовок">
+                          </div>
+                        </div>
+                        <div class="control-group">
+                          <label class="control-label" for="input_picture">Картинка</label>
+                          <div class="controls">
+                            <input type="file" id="input_picture">
+                          </div>
+                        </div>
+                        <div class="control-group">
+                          <div class="controls">
+                            <button type="button" class="btn" id="picture_btn">Создать</button>
+                          </div>
+                        </div>
+                      </form>
+                  </div>
+                  <div class="span4 hero-unit">
+                    <img src="" id="imageURL"></img>
+                  </div>
+                </div>
+              </div>
+              <div class="" style="margin-top: 100px;" id="pictures_block">
+              </div>
+            </div> 
+            <hr>
+            <footer>
+                <p class="pull-right">© Scailer 2014</p>
+            </footer>
+        </div>
+        <script src="{{ STATIC_URL}}bootstrap/js/bootstrap.min.js"></script>
+    </body>
+</html>
