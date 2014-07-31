@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from celery.task import task
+from utils import logger
 from utils.zip import InMemoryZip
 from django.conf import settings
 from django.core.mail import EmailMultiAlternatives
@@ -25,3 +26,5 @@ def send_pictures(email, picture_pk_list):
         [email])
     msg.attach_alternative(imz.in_memory_data.getvalue(), "application/zip")
     msg.send()
+
+    logger.info('Send mail to {}'.format(email))

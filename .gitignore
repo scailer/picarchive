@@ -24,3 +24,4 @@ mithril_static
 /mithril-office/
 /reports*
 .ropeproject
+project/picarchive.db

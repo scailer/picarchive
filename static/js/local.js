@@ -166,7 +166,8 @@ $(document).ready(function(){
             contentType: "application/json",
             data: JSON.stringify(data)
         }).done( function(data) {
-            document.location = '/';
+            alert('Вы успешно зарегистрировались и теперь можете залогиниться');
+            document.location = '/'
         }).fail( function(data) {
             if (data.status == 400) {
                 $('.form_error').remove();
