@@ -147,6 +147,9 @@ $(document).ready(function(){
                 $.each(Object.keys(errors), function( index, value ) {
                     $('#input_' + value).after('<span class="form_error">' + errors[value].join(' ') + '</span>')
                 });
+                if (errors['non_field_errors'] != undefined) {
+                    $('#input_username').parent().parent().before('<span class="form_error">'+ errors['non_field_errors'].join(' ') + '</span>');
+                };
             };
         });
     });
